@@ -1,0 +1,76 @@
+// Dota Heroes File
+// NOTE: This is not for creating new heroes, this is for taking a currently existing hero as a template and overriding
+// the specified key-value combinations.  Use override_hero <hero_to_override> for this.
+"DOTAHeroes"
+{
+	//=================================================================================================================
+	// HERO: Templar Assassin
+	//=================================================================================================================
+	"npc_dota_hero_templar_assassin_template"
+	{
+		"override_hero"				"npc_dota_hero_templar_assassin"			// Hero to override
+		"Ability1"					"custom_blink"		// Ability 1
+		"Ability2"          "cool_beans"
+		"Ability3"					"my_arrow"
+		"VisionDaytimeRange"		"5000"										// Range of vision at night time.
+	}
+
+	"wraith_king"
+	{
+		"override_hero"				"npc_dota_hero_skeleton_king"
+		"Ability1"						"wraith_king_q"
+		"Ability2"      			""
+		"Ability3"						""
+		"Ability4"						""
+		"Ability5"						"hero_spawn_booter"
+		"Ability6"						""
+		"Ability7"						""
+		"Ability8"						""
+		"Ability9"						""
+		"Ability10"						""
+		"Ability11"						""
+		"Ability12"						""
+		"Ability13"						""
+		"Ability14"						""
+		"Ability15"						""
+		"Ability16"						""
+		"Ability17"						""
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"MovementSpeed"				"450"		// Speed.		
+
+		"StatusHealth"				"1"		// Base health.
+		"StatusMaxHealth"				"4"		// Base health.
+		"StatusHealthRegen"			"0.0"		// Health regeneration rate.
+		"StatusMana"				"100"			// Base mana.
+		"StatusManaRegen"			"0.0"		// Mana regeneration rate.
+
+		"VisionDaytimeRange"		"1000"		// Range of vision during day light.
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"	
+	}
+
+	"sven"
+	{
+		"override_hero"				"npc_dota_hero_sven"
+		"Ability1"						""
+		"Ability2"      			""
+		"Ability3"						""
+		"Ability4"						""
+		"Ability5"						"hero_spawn_booter"
+		"Ability6"						""
+		"Ability7"						""
+		"Ability8"						""
+		"Ability9"						""
+		"Ability10"						""
+		"Ability11"						""
+		"Ability12"						""
+		"Ability13"						""
+		"Ability14"						""
+		"Ability15"						""
+		"Ability16"						""
+		"Ability17"						""
+
+		"MovementCapabilities"		"DOTA_UNIT_CAP_MOVE_GROUND"
+		"AttackCapabilities"		"DOTA_UNIT_CAP_NO_ATTACK"
+	}
+}

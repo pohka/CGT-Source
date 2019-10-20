@@ -1,0 +1,176 @@
+// Dota Heroes File
+"DOTAAbilities"
+{
+	"Version"		"1"
+
+	//=================================================================================================================
+	// Templar Assassin: Refraction Holdout
+	//=================================================================================================================
+	"custom_blink"
+	{
+		"BaseClass"						"ability_lua"
+		"ScriptFile"					"custom_blink"
+
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.0 0.0 0.0 0.0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"17.0 15.0 12.0 9.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"100"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"damage_absorb"				"200 300 400 500"
+			}
+			"02"
+			{
+				"var_type"					"FIELD_INTEGER"
+				"bonus_damage"				"20 40 60 80"
+			}
+			"04"
+			{
+				"var_type"					"FIELD_FLOAT"
+				"duration"					"17.0 17.0 17.0 17.0"
+			}
+		}
+	}
+
+	"cool_beans"
+	{
+		// General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"           "ability_lua"
+		"ScriptFile"					"cool_beans"
+
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityTextureName"     "dragon_knight_dragon_tail"
+    "AbilityUnitTargetTeam"  "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"  "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+    "AbilityUnitTargetFlags" "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+    "AbilityUnitDamageType"  "DAMAGE_TYPE_PHYSICAL"
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "3"
+    "RequiredLevel"          "1"
+    "LevelsBetweenUpgrades"  "2"
+
+    "AbilityCastPoint"       "0.0"
+    "AbilityCastAnimation"   "ACT_DOTA_ATTACK"
+    "AnimationPlaybackRate"  "1"
+    "AnimationIgnoresModelScale" "1"
+
+    // Stats
+    //----------------------------------------------------------------------------------------
+		"AbilityDamage" 					"20 50 100"
+    "AbilityManaCost"         "10 10 20"
+    "AbilityCooldown"         "2.0 1.0 0.5"
+    "AbilityCastRange"        "500"
+    //"AbilityCastRangeBuffer"  "250"
+    //"AbilityChannelTime"      "0.0 0.0 0.0"
+    //"AbilityChannelledManaCostPerSecond" "30 35 40"
+    //"AbilityDuration"         "0.0 0.0 0.0"
+    //"AoERadius"               "250"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_FLOAT"
+				"stun_duration" 		"0.5 1.0 3.0"
+			}
+			"02"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"vision_radius" 		"500"
+			}
+		}
+	}
+
+	"my_arrow"
+	{
+		"BaseClass"           "ability_lua"
+		"ScriptFile"					"my_arrow"
+
+		"AbilityBehavior"     "DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityTextureName"     "mirana_arrow"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"speed" 		"600"
+			}
+		}
+	}
+
+	"wraith_king_q"
+	{
+		// General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"           "ability_lua"
+		"ScriptFile"					"wraith_king_q"
+
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+    "AbilityTextureName"     "skeleton_king_hellfire_blast"
+    "AbilityUnitTargetTeam"  "DOTA_UNIT_TARGET_TEAM_ENEMY"
+    "AbilityUnitTargetType"  "DOTA_UNIT_TARGET_HERO"
+    "AbilityUnitDamageType"  "DAMAGE_TYPE_PURE"
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "1"
+    "RequiredLevel"          "1"
+
+    "AbilityCastPoint"       "0.5"
+    "AbilityCastAnimation"   "ACT_DOTA_CAST_ABILITY_1"
+    "AnimationPlaybackRate"  "0.7"
+    "AnimationIgnoresModelScale" "1"
+
+    // Stats
+		"AbilityDamage" 					"2"
+    "AbilityManaCost"         "0"
+    "AbilityCooldown"         "5.0"
+    "AbilityCastRange"        "500"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"projectile_speed" 		"700"
+			}
+		}
+	}
+
+	"hero_spawn_booter"
+	{
+		// General  
+    // ----------------------------------------------------------------------------------------
+    "BaseClass"           "ability_lua"
+		"ScriptFile"					"hero_spawn_booter"
+
+    "AbilityBehavior"        "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+    "AbilityTextureName"     "skeleton_king_reincarnation"
+
+    "AbilityType"            "DOTA_ABILITY_TYPE_BASIC"
+    "MaxLevel"               "1"
+    "RequiredLevel"          "1"
+
+    "AbilityCastPoint"       "0.0"
+	}
+}
