@@ -1,0 +1,10 @@
+"AddonInfo"
+{
+	"maps"			"my_map"
+	"IsPlayable"	"1"
+
+	"my_map"
+	{
+		"MaxPlayers"                    "10"
+	}
+}

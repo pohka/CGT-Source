@@ -1,0 +1,261 @@
+"DOTAAbilities"
+{
+  "item_custom_blink"
+  {
+		"ID"							"3000"
+		"BaseClass"						"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"			"item_blink"
+		"ScriptFile"					"item_custom_blink.lua"
+
+		"AbilityCastPoint"				"0.0"
+		"AbilityCooldown"				"10.0"
+
+		"ItemStackable"					"0"
+		"ItemShareability"				"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable"					"1"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"				"0"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"max_range"		"1200"
+			}
+			"02"
+			{
+				"var_type"			"FIELD_INTEGER"
+				"penalty_range"		"960"
+			}
+		}
+  }
+
+	"item_shield"
+  {
+		"ID"								"3001"
+		"BaseClass"							"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityTextureName"		"item_lotus_orb"
+		"ScriptFile"						"item_shield.lua"
+
+		"AbilityCastPoint"			"0.0"
+		"AbilityCooldown"				"5.0"
+
+		"ItemStackable"					"0"
+		"ItemShareability"			"ITEM_NOT_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable"					"1"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"			"0"
+  }
+
+	"item_boots_tier_1"
+  {
+		"ID"										"3002"
+		"BaseClass"							"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"		"item_boots"
+		"ScriptFile"						"item_boots_tier_1.lua"
+
+		"ItemStackable"					"0"
+		"ItemShareability"			"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable"					"1"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"			"0"
+		"Model" 								"models/props_gameplay/boots_of_speed.vmdl"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"tier"			"1"
+			}
+			"02"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"move_speed"			"100"
+			}
+		}
+  }
+
+	"item_boots_tier_2"
+  {
+		"ID"										"3003"
+		"BaseClass"							"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"		"item_phase_boots"
+		"ScriptFile"						"item_boots_tier_2.lua"
+
+		"ItemStackable"					"0"
+		"ItemShareability"			"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable"					"1"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"			"0"
+		"Model" 								"models/props_gameplay/boots_of_speed.vmdl"
+		"Effect" 								"particles/units/heroes/hero_silencer/silencer_last_word_status_ring_ember.vpcf"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"tier"			"2"
+			}
+			"02"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"move_speed"			"175"
+			}
+		}
+  }
+
+	"item_boots_tier_3"
+  {
+		"ID"										"3004"
+		"BaseClass"							"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"		"item_travel_boots"
+		"ScriptFile"						"item_boots_tier_3.lua"
+
+		"ItemStackable"					"0"
+		"ItemShareability"			"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable"					"1"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"			"0"
+		"Model" 								"models/props_gameplay/boots_of_speed.vmdl"
+		"Effect" 								"particles/econ/items/silencer/silencer_ti6/silencer_last_word_status_ti6_ring_ember.vpcf"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"tier"			"3"
+			}
+			"02"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"move_speed"			"250"
+			}
+		}
+  }
+
+	"item_armor_tier_1"
+  {
+		"ID"										"3005"
+		"BaseClass"							"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"		"item_chainmail"
+		"ScriptFile"						"item_armor_tier_1"
+
+		"ItemStackable"					"0"
+		"ItemShareability"			"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable"					"1"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"			"0"
+		//"Model" 								"models/props_gameplay/boots_of_speed.vmdl"
+		//"Effect" 								"particles/econ/items/silencer/silencer_ti6/silencer_last_word_status_ti6_ring_ember.vpcf"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"tier"			"1"
+			}
+			"02"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"hp"				"2"
+			}
+		}
+  }
+
+	"item_armor_tier_2"
+  {
+		"ID"										"3006"
+		"BaseClass"							"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"		"item_platemail"
+		"ScriptFile"						"item_armor_tier_2"
+
+		"ItemStackable"					"0"
+		"ItemShareability"			"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable"					"1"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"			"0"
+		//"Model" 								"models/props_gameplay/boots_of_speed.vmdl"
+		"Effect" 								"particles/units/heroes/hero_silencer/silencer_last_word_status_ring_ember.vpcf"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"tier"			"1"
+			}
+			"02"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"hp"				"3"
+			}
+		}
+  }
+
+	"item_armor_tier_3"
+  {
+		"ID"										"3007"
+		"BaseClass"							"item_lua"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityTextureName"		"item_assault"
+		"ScriptFile"						"item_armor_tier_3"
+
+		"ItemStackable"					"0"
+		"ItemShareability"			"ITEM_FULLY_SHAREABLE"
+		"ItemPermanent"					"0"
+		"ItemPurchasable"				"1"
+		"ItemKillable"					"0"
+		"ItemDroppable"					"1"
+		"ItemSellable"					"0"
+		"AllowedInBackpack"			"0"
+		//"Model" 								"models/props_gameplay/boots_of_speed.vmdl"
+		"Effect" 								"particles/econ/items/silencer/silencer_ti6/silencer_last_word_status_ti6_ring_ember.vpcf"
+
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"tier"			"1"
+			}
+			"02"
+			{
+				"var_type" 	"FIELD_INTEGER"
+				"hp"				"4"
+			}
+		}
+  }
+}
