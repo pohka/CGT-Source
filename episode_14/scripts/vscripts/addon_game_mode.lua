@@ -4,6 +4,8 @@ if BattleArena == nil then
 	BattleArena = class({})
 end
 
+
+
 require("game_setup")
 require("query")
 
@@ -29,6 +31,7 @@ function Precache( context )
 end
 
 require("game_setup")
+require("constants")
 
 -- Create the game mode when we activate
 function Activate()
@@ -36,10 +39,9 @@ function Activate()
 	GameRules.AddonTemplate:InitGameMode()
 end
 
-
 function BattleArena:InitGameMode()
 	print( "Template addon is loaded." )
-	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 2 )
+	GameRules:GetGameModeEntity():SetThink( "OnThink", self, "GlobalThink", 1 )
 
 	GameSetup:init()
 
@@ -116,12 +118,28 @@ function BattleArena:OnUnitSpawned( args )
 	end
 end
 
-
 -- Evaluate the state of the game
 function BattleArena:OnThink()
 	if GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-		--print( "Template addon script is running." )
+		--print("here")
+
+
+		local myTable = CustomNetTables:GetTableValue("game_state", "round_data")
+
+		print("constant value:", CUSTOM_GAME_STATE_LOOT)
+
+		if myTable == nil then
+			print("value is nil")
+			CustomNetTables:SetTableValue("game_state", "round_data", { value = 0, last_update = GameRules:GetGameTime() })
+		else
+			print("value:" .. myTable.value)
+			local nextValue = myTable.value + 1
+			CustomNetTables:SetTableValue("game_state", "round_data", { value = nextValue })
+		end
+
 		
+		
+
 	elseif GameRules:State_Get() >= DOTA_GAMERULES_STATE_POST_GAME then
 		return nil
 	end

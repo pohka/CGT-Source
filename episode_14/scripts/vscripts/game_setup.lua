@@ -148,7 +148,7 @@ function GameSetup:OnStateChange()
   if GameRules:State_Get() == DOTA_GAMERULES_STATE_STRATEGY_TIME then
     GameSetup:RandomForNoHeroSelected()
   elseif GameRules:State_Get() == DOTA_GAMERULES_STATE_GAME_IN_PROGRESS then
-    GameSetup:SpawnItems()
+    --GameSetup:SpawnItems()
 
     if IsInToolsMode() then
       --create test hero and allow player to control it
