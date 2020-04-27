@@ -31,15 +31,6 @@ function GameSetup:init()
     GameRules:SetCustomGameAllowMusicAtGameStart(false)
     GameRules:SetCustomGameAllowBattleMusic(false)
 
-    -- Remove starting TP scroll using inventroy filter
-    -- GameRules:GetGameModeEntity():SetItemAddedToInventoryFilter(function(ctx, event)
-    --     local item = EntIndexToHScript(event.item_entindex_const)
-    --     if item:GetAbilityName() == "item_tpscroll" and item:GetPurchaser() == nil then 
-    --       return false
-    --     end
-    --     return true
-    -- end, self)
-
     GameSetup:AddInventroyFilter()
 
     --multiple players can pick the same hero
